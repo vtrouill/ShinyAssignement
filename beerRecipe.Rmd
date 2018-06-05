@@ -1,0 +1,47 @@
+---
+title: "Beer variables Vs Style"
+author: "vincent trouillet"
+date: "5 juin 2018"
+output: ioslides_presentation
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## overview
+
+This was built as part of a deliverable for the course Developing Data Products as part of the Coursera Data Science Specialization.
+
+The app developed for the first part of the assignment demo is avalilable at: 
+https://thetrouille.shinyapps.io/ShinyAssign/
+
+Source code for ui.R and server.R files are available on the GitHub repo:
+https://github.com/vtrouill/ShinyAssignement
+ 
+
+
+## Beer Dataset (1/2)
+
+```{r beer, echo =  FALSE}
+setwd("ShinyAssign")
+beer<-read.csv("BeerRecipesST101.csv")
+```
+```{r beer2, echo = FALSE}
+str(beer)
+```
+
+## Beer Dataset (2/2)
+
+there are eight style of beer (american IPA, American brown Ale, imperial IPA, Irish Red Ale, Belgian Specialty Ale, witbier, saison and Russian Imperial Stout).
+
+3 variables will be considered for the application : ABV (alcohol in %), IBU (bitterness), and COLOR ( Morey formula)
+
+
+## the application
+
+
+The application displays the behaviour of a variable in relation to the style of beer for different types of figure (boxplot, histogram and density)
+
+The variable visualized and the type of figure is left to the user's choice.
